@@ -1,0 +1,23 @@
+<br><br>
+<nav>
+    <ul>
+        <li>
+            <a href="/">Pagina Inicio</a>
+        </li>
+        {{#if isLogin}}
+            <li>
+                <a href="/perfil">Perfil</a>
+            </li>
+            <li>
+                <a href="/api/sessions/logout?web=1">Logout</a>
+            </li>
+        {{else}}
+            <li>
+                <a href="/register">Registro</a>
+            </li>
+            <li>
+                <a href="/login">Login</a>
+            </li>
+        {{/if}}
+    </ul>
+</nav>

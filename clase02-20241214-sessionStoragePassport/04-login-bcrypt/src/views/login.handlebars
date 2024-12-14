@@ -1,0 +1,13 @@
+<h2>Login usuarios</h2>
+<hr>
+
+<form action="/api/sessions/login" method="post">
+    <div id="mensaje">{{mensaje}}</div>
+    <input type="email" name="email" placeholder="correo electrónico">
+    <input type="password" name="password" placeholder="contraseña">
+    <input type="text" name="web" value="web" hidden>
+    <br>
+    <input type="submit" value="Ingresar">
+</form>
+
+{{>menu}}

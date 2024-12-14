@@ -1,0 +1,14 @@
+<h2>Registro usuarios</h2>
+<hr>
+
+<form action="/api/sessions/register" method="post">
+    <div id="mensaje">{{mensaje}}</div>
+    <input type="text" name="nombre" placeholder="nombre completo">
+    <input type="email" name="email" placeholder="correo electrónico">
+    <input type="password" name="password" placeholder="contraseña">
+    <input type="text" name="web" value="web" hidden>
+    <br>
+    <input type="submit" value="Registrar">
+</form>
+
+{{>menu}}
