@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Front...</h2>
+    <hr>
+    <div id="datos"></div>
+    <button id="btnDatos">Recupera Datos</button>
+
+    <script>
+        let divDatos=document.getElementById("datos")
+        let btnDatos=document.getElementById("btnDatos")
+
+        btnDatos.addEventListener("click", async(e)=>{
+            e.preventDefault()
+
+            try {
+                let respuesta=await fetch("http://localhost:3000/datos")
+                if(respuesta.status>=400){
+                    divDatos.textContent=respuesta.statusText
+                    return 
+                }
+                let datos=await respuesta.json()
+                divDatos.textContent=datos.payload
+            } catch (error) {
+                divDatos.textContent="Ocurrió algo... :("
+            }
+        })
+    </script>
+</body>
+</html>
