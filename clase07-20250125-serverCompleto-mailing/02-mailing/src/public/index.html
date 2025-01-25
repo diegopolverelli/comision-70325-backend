@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Prueba envio mails:</h2>
+    <hr>
+
+    <form action="/enviarmail" method="post" enctype="multipart/form-data">
+
+        <input type="text" placeholder="destinatario" id="to" name="to">
+        <input type="text" placeholder="asunto" id="subject" name="subject">
+        <input type="text" placeholder="mensaje" id="message" name="message">
+        <input type="file" name="archivos" multiple />
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+
+</html>
